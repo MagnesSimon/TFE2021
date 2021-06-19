@@ -2,13 +2,9 @@ const sql = require("./db");
 
 // Constructor
 const localite = function (localite) {
-    this.reference = localite.reference;
-    this.valeur_seuil = localite.valeur_seuil;
-    this.quantite_en_stock = localite.quantite_en_stock;
-    this.id_jeu_de_dimension = localite.id_jeu_de_dimension;
-    this.id_famille = localite.id_famille;
-    this.id_categorie = localite.id_categorie;
-    this.id_finition = localite.id_finition;
+    this.code_postal = localite.code_postal;
+    this.nom_localite = localite.nom_localite;
+    this.id_pays = localite.id_pays;
 }
 /*
 Permet d'insérer une nouvelles pieces dans la DB

@@ -30,6 +30,7 @@ require("./routes/piece.routes")(app);
 require("./routes/famille.routes")(app);
 require("./routes/fournisseur.routes")(app);
 require("./routes/localite.routes")(app);
+require("./routes/pays.routes")(app);
 
 app.listen(3001, () => {
     console.log("Server is running on port 3001.");
