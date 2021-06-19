@@ -9,9 +9,12 @@ const piece = function (piece) {
     this.id_famille = piece.id_famille;
     this.id_categorie = piece.id_categorie;
     this.id_finition = piece.id_finition;
+
+    this.id_pays = pays.id_pays;
+    this.nom_pays = pays.nom_pays;
 }
 /*
-Permet d'insérer une nouvelles pieces dans la DB
+Permet d'insérer une nouvelles piece dans la DB
  */
 piece.create = (newPiece, result) => {
     sql.query("INSERT INTO piece SET ?", newPiece, (err, res) => {
@@ -20,14 +23,12 @@ piece.create = (newPiece, result) => {
             result(err, null);
             return;
         }else {
-            console.log("Piece crée avec succès",{ id: res.insertId, ...newPiece});
+            console.log("piece crée avec succès",{ id: res.insertId, ...newPiece});
             result(null, { id: res.insertId, ...newPiece});
         }
     });
 }
-/*
-Permet de récupérer la liste de toutes les pièces avec tout ses attributs
- */
+
 piece.getAll = result => {
     sql.query("SELECT * FROM piece", (err, res) => {
         if(err){
@@ -62,7 +63,7 @@ piece.updateById = (reference, valeur_seuil, quantite_en_stock, id_jeu_de_dimens
                     id_famille, id_categorie, id_finition, result) => {
     sql.query(
         "UPDATE piece SET reference = ?, valeur_seuil = ?, quantite_en_stock = ?, id_jeu_de_dimension = ?," +
-        " id_famille = ?, id_categorie = ?, id_finition = ?"
+        " id_famille = ?, id_categorie = ?, id_finition = ?",
         [piece.reference, piece.valeur_seuil, piece.quantite_en_stock, piece.id_jeu_de_dimension,
             piece.id_famille, piece.id_categorie, piece.id_finition],
         (err, res) => {
@@ -78,7 +79,7 @@ piece.updateById = (reference, valeur_seuil, quantite_en_stock, id_jeu_de_dimens
 };
 
 piece.remove = (id, result) => {
-    sql.query("DELETE FROM piece WHERE reference = ?", id, (err, res) => {
+    sql.query("DELETE FROM piece WHERE id_fournisseur = ?", id, (err, res) => {
         if (err) {
             console.log("error: ", err);
             result(null, err);

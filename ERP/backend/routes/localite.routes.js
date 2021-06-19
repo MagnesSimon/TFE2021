@@ -3,4 +3,9 @@ module.exports = app => {
 
     app.get("/localites", localite.findAll);
 
+    app.get("/localite/:id", localite.findOne);
+
+    app.put("/localite/:id", localite.update);
+
+    app.delete("/localite/:id", localite.delete);
 }

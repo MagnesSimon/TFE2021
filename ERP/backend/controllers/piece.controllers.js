@@ -13,6 +13,14 @@ exports.create = (req, res) => {
         id_jeu_de_dimension: req.body.id_jeu_de_dimension,
         id_famille: req.body.id_famille,
         id_categorie: req.body.id_categorie,
+        id_finition: req.body.id_finition,
+
+        reference: req.body.reference,
+        valeur_seuil: req.body.valeur_seuil,
+        quantite_en_stock: req.body.quantite_en_stock,
+        id_jeu_de_dimension: req.body.id_jeu_de_dimension,
+        id_famille: req.body.id_famille,
+        id_categorie: req.body.id_categorie,
         id_finition: req.body.id_finition
     });
 
@@ -38,7 +46,7 @@ exports.findAll = (req, res) => {
 }
 
 exports.findOne = (req, res) => {
-    Finition.getById(req.params.id, (err, data) => {
+    Piece.getById(req.params.id, (err, data) => {
         if (err) {
             if (err.kind === "not_found") {
                 res.status(404).send({

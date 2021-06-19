@@ -20,7 +20,7 @@ famille.create = (newFamille, result) => {
             result(err, null);
             return;
         }else {
-            console.log("Famille crée avec succès",{ id: res.insertId, ...newFamille});
+            console.log("famille crée avec succès",{ id: res.insertId, ...newFamille});
             result(null, { id: res.insertId, ...newFamille});
         }
     });
@@ -39,5 +39,55 @@ famille.getAll = result => {
         }
     });
 }
+
+famille.getById = (reference, result) => {
+    sql.query(`SELECT * FROM piece WHERE reference = ${reference}`, (err, res) => {
+        if (err) {
+            console.log("error: ", err);
+            result(err, null);
+            return;
+        }
+
+        if (res.length) {
+            console.log("found famille: ", res[0]);
+            result(null, res[0]);
+            return;
+        }
+
+        result({ kind: "not_found" }, null);
+    });
+};
+
+famille.updateById = (id_famille, nom_famille, materiau, pour_trou,
+                    specificite_technique, image, id_fournisseur, result) => {
+    sql.query(
+        "UPDATE famille SET specificite_technique = ?, nom_famille = ?, materiau = ?, pour_trou = ?," +
+        " specificite_technique = ?, image = ?, id_fournisseur = ?",
+            [famille.reference, famille.valeur_seuil, famille.quantite_en_stock, famille.id_jeu_de_dimension,
+            famille.id_famille, famille.id_categorie, famille.id_finition],
+        (err, res) => {
+            if (err) {
+                console.log("error: ", err);
+                result(null, err);
+                return;
+            }
+            console.log("updated famille: ", {id: id, ...famille});
+            result(null, {id: id, ...famille});
+        }
+    );
+};
+
+famille.remove = (id, result) => {
+    sql.query("DELETE FROM famille WHERE id_fournisseur = ?", id, (err, res) => {
+        if (err) {
+            console.log("error: ", err);
+            result(null, err);
+            return;
+        }
+
+        console.log("deleted famille with id: ", id);
+        result(null, res);
+    });
+};
 
 module.exports = famille;
