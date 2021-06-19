@@ -1,6 +1,6 @@
 module.exports = {
     HOST: "localhost",
     USER: "root",
-    PASSWORD: "root",
-    DB: "web2021"
+    PASSWORD: "",
+    DB: "stock_ags"
 };
