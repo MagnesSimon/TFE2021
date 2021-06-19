@@ -40,4 +40,54 @@ piece.getAll = result => {
     });
 }
 
+piece.getById = (reference, result) => {
+    sql.query(`SELECT * FROM piece WHERE reference = ${reference}`, (err, res) => {
+        if (err) {
+            console.log("error: ", err);
+            result(err, null);
+            return;
+        }
+
+        if (res.length) {
+            console.log("found piece: ", res[0]);
+            result(null, res[0]);
+            return;
+        }
+
+        result({ kind: "not_found" }, null);
+    });
+};
+
+piece.updateById = (reference, valeur_seuil, quantite_en_stock, id_jeu_de_dimension,
+                    id_famille, id_categorie, id_finition, result) => {
+    sql.query(
+        "UPDATE piece SET reference = ?, valeur_seuil = ?, quantite_en_stock = ?, id_jeu_de_dimension = ?," +
+        " id_famille = ?, id_categorie = ?, id_finition = ?"
+        [piece.reference, piece.valeur_seuil, piece.quantite_en_stock, piece.id_jeu_de_dimension,
+            piece.id_famille, piece.id_categorie, piece.id_finition],
+        (err, res) => {
+            if (err) {
+                console.log("error: ", err);
+                result(null, err);
+                return;
+            }
+            console.log("updated piece: ", {id: id, ...piece});
+            result(null, {id: id, ...piece});
+        }
+    );
+};
+
+piece.remove = (id, result) => {
+    sql.query("DELETE FROM piece WHERE reference = ?", id, (err, res) => {
+        if (err) {
+            console.log("error: ", err);
+            result(null, err);
+            return;
+        }
+
+        console.log("deleted piece with id: ", id);
+        result(null, res);
+    });
+};
+
 module.exports = piece;

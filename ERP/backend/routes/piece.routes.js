@@ -3,4 +3,10 @@ module.exports = app => {
 
     app.get("/pieces", piece.findAll);
 
+    app.get("/piece/:id", piece.findOne);
+
+    app.put("/piece/:id", piece.update);
+
+    app.delete("/piece/:id", piece.delete);
+
 }
