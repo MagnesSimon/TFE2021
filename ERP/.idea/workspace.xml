@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ead7f310-fc9b-4b70-a6cb-643dbe63120a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/controllers/categorie.controllers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/controllers/dimension.controllers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/controllers/fonctionnalite.controllers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/controllers/historique.controllers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/controllers/jeu_de_dimension.controllers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/controllers/pole.controllers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/controllers/profil.controllers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/controllers/utilisateur.controllers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/models/categorie.models.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/models/dimension.models.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/models/fonctionnalite.models.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/models/historique.models.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/models/jeu_de_dimension.models.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/models/pole.models.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/models/profil.models.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/models/utilisateur.models.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/routes/categorie.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/routes/dimension.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/routes/fonctionnalite.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/routes/historique.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/routes/jeu_de_dimension.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/routes/pole.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/routes/profil.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/routes/utilisateur.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/piece.controllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/piece.controllers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/famille.models.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/famille.models.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/piece.models.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/piece.models.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles.scss" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1u27gnZqo1bKfIiqD4FwWY7puLD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Openclassroom/mon-projet-angular" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\Users\Simon\Documents\GitHub\TFE2021\ERP\frontend\node_modules\typescript\lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ead7f310-fc9b-4b70-a6cb-643dbe63120a" name="Default Changelist" comment="" />
+      <created>1623851943826</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1623851943826</updated>
+      <workItem from="1623851945047" duration="35000" />
+      <workItem from="1623919082633" duration="41000" />
+      <workItem from="1623920273618" duration="717000" />
+      <workItem from="1624096671442" duration="22044000" />
+      <workItem from="1624611970393" duration="816000" />
+    </task>
+    <task id="LOCAL-00001" summary="Début backend - select de toutes les pièces">
+      <created>1624102926088</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1624102926088</updated>
+    </task>
+    <task id="LOCAL-00002" summary="API ajout et afficher toutes les familles avec condition pour images nulles">
+      <created>1624105320113</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1624105320113</updated>
+    </task>
+    <task id="LOCAL-00003" summary="API INSERT fournisseur et SELECT * fournisseur">
+      <created>1624105824775</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1624105824775</updated>
+    </task>
+    <task id="LOCAL-00004" summary="API INSERT localite et SELECT * localite">
+      <created>1624106224052</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1624106224052</updated>
+    </task>
+    <task id="LOCAL-00005" summary="API INSERT pays et SELECT * pays">
+      <created>1624106741634</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1624106741634</updated>
+    </task>
+    <task id="LOCAL-00006" summary="API INSERT Finition et SELECT * Finition&#10;Ajout des méthode GetById, UPDATE, et REMOVE">
+      <created>1624110806302</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1624110806302</updated>
+    </task>
+    <task id="LOCAL-00007" summary="&#10;Ajout des méthode GetById, UPDATE, et REMOVE">
+      <created>1624113773880</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1624113773880</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Début backend - select de toutes les pièces" />
+    <MESSAGE value="API ajout et afficher toutes les familles avec condition pour images nulles" />
+    <MESSAGE value="API ajout et afficher tout les fournisseurs" />
+    <MESSAGE value="API INSERT fournisseur et SELECT * fournisseur" />
+    <MESSAGE value="API INSERT localite et SELECT * localite" />
+    <MESSAGE value="API INSERT pays et SELECT * pays" />
+    <MESSAGE value="API INSERT Finition et SELECT * Finition&#10;Ajout des méthode GetById, UPDATE, et REMOVE" />
+    <MESSAGE value="&#10;Ajout des méthode GetById, UPDATE, et REMOVE" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;Ajout des méthode GetById, UPDATE, et REMOVE" />
+  </component>
+</project>
