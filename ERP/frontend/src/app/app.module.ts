@@ -9,6 +9,8 @@ import { AutentificationComponent } from './autentification/autentification.comp
 import { HistoriqueComponent } from './historique/historique.component';
 import { DroitsComponent } from './droits/droits.component';
 import { PenurieComponent } from './penurie/penurie.component';
+import {PieceServices} from "./services/piece.services";
+import {HttpClientModule} from "@angular/common/http";
 
 const appRoutes: Routes = [
   {path: 'liste' , component : ListeViewComponent},
@@ -31,9 +33,12 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    PieceServices
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

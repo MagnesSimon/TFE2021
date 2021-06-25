@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {async, Subscription} from "rxjs";
+import {PieceServices} from "../services/piece.services";
+
 
 @Component({
   selector: 'app-liste-view',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListeViewComponent implements OnInit {
 
-  constructor() { }
+  private piece : any[''];
+  private pieceSubsciption: Subscription | undefined;
 
-  ngOnInit(): void {
+  constructor(private pieceServices: PieceServices) {
+  }
+
+  ngOnInit() {
+    this.piece = this.pieceServices.getAllPiecesFromServer();
+    // @ts-ignore
+    console.log(this.piece) | async ;
+  }
+
+  onFetch(){
+    this.pieceServices.getAllPiecesFromServer();
   }
 
 }
