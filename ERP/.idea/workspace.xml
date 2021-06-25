@@ -2,36 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ead7f310-fc9b-4b70-a6cb-643dbe63120a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/controllers/categorie.controllers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/controllers/dimension.controllers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/controllers/fonctionnalite.controllers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/controllers/historique.controllers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/controllers/jeu_de_dimension.controllers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/controllers/pole.controllers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/controllers/profil.controllers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/controllers/utilisateur.controllers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/models/categorie.models.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/models/dimension.models.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/models/fonctionnalite.models.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/models/historique.models.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/models/jeu_de_dimension.models.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/models/pole.models.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/models/profil.models.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/models/utilisateur.models.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/routes/categorie.routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/routes/dimension.routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/routes/fonctionnalite.routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/routes/historique.routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/routes/jeu_de_dimension.routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/routes/pole.routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/routes/profil.routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/routes/utilisateur.routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/piece.controllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/piece.controllers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/famille.models.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/famille.models.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/piece.models.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/piece.models.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/autentification/autentification.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/autentification/autentification.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/autentification/autentification.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/autentification/autentification.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/droits/droits.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/droits/droits.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/droits/droits.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/droits/droits.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/header/header.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/header/header.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/header/header.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/header/header.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/historique/historique.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/historique/historique.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/historique/historique.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/historique/historique.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/liste-view/liste-view.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/liste-view/liste-view.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/liste-view/liste-view.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/liste-view/liste-view.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/penurie/penurie.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/penurie/penurie.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/penurie/penurie.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/penurie/penurie.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +49,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Openclassroom/mon-projet-angular" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -75,7 +75,7 @@
       <workItem from="1623919082633" duration="41000" />
       <workItem from="1623920273618" duration="717000" />
       <workItem from="1624096671442" duration="22044000" />
-      <workItem from="1624611970393" duration="816000" />
+      <workItem from="1624611970393" duration="4007000" />
     </task>
     <task id="LOCAL-00001" summary="Début backend - select de toutes les pièces">
       <created>1624102926088</created>
@@ -126,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624113773880</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Correction backend + préparation du frontend pour le dev">
+      <created>1624612936579</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1624612936579</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +149,7 @@
     <MESSAGE value="API INSERT pays et SELECT * pays" />
     <MESSAGE value="API INSERT Finition et SELECT * Finition&#10;Ajout des méthode GetById, UPDATE, et REMOVE" />
     <MESSAGE value="&#10;Ajout des méthode GetById, UPDATE, et REMOVE" />
-    <option name="LAST_COMMIT_MESSAGE" value="&#10;Ajout des méthode GetById, UPDATE, et REMOVE" />
+    <MESSAGE value="Correction backend + préparation du frontend pour le dev" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correction backend + préparation du frontend pour le dev" />
   </component>
 </project>
