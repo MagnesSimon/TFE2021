@@ -41,7 +41,7 @@ famille.getAll = result => {
 }
 
 famille.getById = (reference, result) => {
-    sql.query(`SELECT * FROM piece WHERE reference = ${reference}`, (err, res) => {
+    sql.query(`SELECT * FROM famille WHERE reference = ${reference}`, (err, res) => {
         if (err) {
             console.log("error: ", err);
             result(err, null);
@@ -78,7 +78,7 @@ famille.updateById = (id_famille, nom_famille, materiau, pour_trou,
 };
 
 famille.remove = (id, result) => {
-    sql.query("DELETE FROM famille WHERE id_fournisseur = ?", id, (err, res) => {
+    sql.query("DELETE FROM famille WHERE id_famille = ?", id, (err, res) => {
         if (err) {
             console.log("error: ", err);
             result(null, err);

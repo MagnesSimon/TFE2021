@@ -1,4 +1,4 @@
-const Piece = require("../models/piece.models.js");
+const Jeu_de_dimension = require("../models/jeu_de_dimension.models");
 
 exports.create = (req, res) => {
     if (!req.body){
@@ -6,30 +6,26 @@ exports.create = (req, res) => {
             message: "Content can not be empty !"
         });
     }
-    const piece = new Piece({
-        reference: req.body.reference,
-        valeur_seuil: req.body.valeur_seuil,
-        quantite_en_stock: req.body.quantite_en_stock,
+    const jeu_de_dimension = new Jeu_de_dimension({
         id_jeu_de_dimension: req.body.id_jeu_de_dimension,
-        id_famille: req.body.id_famille,
-        id_categorie: req.body.id_categorie,
-        id_finition: req.body.id_finition,
+        libelle: req.body.libelle,
+        id_dimension: req.body.id_dimension,
     });
 
-    Piece.create(piece, (err,data) =>{
+    Jeu_de_dimension.create(jeu_de_dimension, (err,data) =>{
         if (err){
             res.status(500).send({
-                message: err.message || "Some error occurred while creating the 'piece'."
+                message: err.message || "Some error occurred while creating the 'jeu_de_dimension'."
             });
         } else res.send(data);
     });
 };
 
 exports.findAll = (req, res) => {
-    Piece.getAll((err, data) => {
+    Jeu_de_dimension.getAll((err, data) => {
         if (err){
             res.status(500).send({
-                message: err.message || "Some error occurred while retrieving 'piece'."
+                message: err.message || "Some error occurred while retrieving 'jeu_de_dimension'."
             });
         } else {
             res.send(data);
@@ -38,15 +34,15 @@ exports.findAll = (req, res) => {
 }
 
 exports.findOne = (req, res) => {
-    Piece.getById(req.params.id, (err, data) => {
+    Jeu_de_dimension.getById(req.params.id, (err, data) => {
         if (err) {
             if (err.kind === "not_found") {
                 res.status(404).send({
-                    message: `Not found piece with id ${req.params.id}.`
+                    message: `Not found jeu_de_dimension with id ${req.params.id}.`
                 });
             } else {
                 res.status(500).send({
-                    message: "Error retrieving piece with id " + req.params.id
+                    message: "Error retrieving jeu_de_dimension with id " + req.params.id
                 });
             }
         } else res.send(data);
@@ -59,18 +55,18 @@ exports.update = (req, res) => {
             message: "Content can not be empty!"
         });
     }
-    Piece.updateById(
+    Jeu_de_dimension.updateById(
         req.params.id,
-        new Piece(req.body),
+        new Jeu_de_dimension(req.body),
         (err, data) => {
             if (err) {
                 if (err.kind === "not_found") {
                     res.status(404).send({
-                        message: `Not found piece with id ${req.params.id}.`
+                        message: `Not found jeu_de_dimension with id ${req.params.id}.`
                     });
                 } else {
                     res.status(500).send({
-                        message: "Error updating piece with id " + req.params.id
+                        message: "Error updating jeu_de_dimension with id " + req.params.id
                     });
                 }
             } else
@@ -80,17 +76,17 @@ exports.update = (req, res) => {
 };
 
 exports.delete = (req, res) => {
-    Piece.remove(req.params.id, (err, data) => {
+    Jeu_de_dimension.remove(req.params.id, (err, data) => {
         if (err) {
             if (err.kind === "not_found") {
                 res.status(404).send({
-                    message: `Not found piece with id ${req.params.id}.`
+                    message: `Not found jeu_de_dimension with id ${req.params.id}.`
                 });
             } else {
                 res.status(500).send({
-                    message: "Could not delete piece with id " + req.params.id
+                    message: "Could not delete jeu_de_dimension with id " + req.params.id
                 });
             }
-        } else res.send({ message: `piece was deleted successfully!` });
+        } else res.send({ message: `jeu_de_dimension was deleted successfully!` });
     });
 };

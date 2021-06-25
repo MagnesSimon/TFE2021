@@ -1,4 +1,4 @@
-const Piece = require("../models/piece.models.js");
+const Profil = require("../models/profil.models.js");
 
 exports.create = (req, res) => {
     if (!req.body){
@@ -6,30 +6,26 @@ exports.create = (req, res) => {
             message: "Content can not be empty !"
         });
     }
-    const piece = new Piece({
-        reference: req.body.reference,
-        valeur_seuil: req.body.valeur_seuil,
-        quantite_en_stock: req.body.quantite_en_stock,
-        id_jeu_de_dimension: req.body.id_jeu_de_dimension,
-        id_famille: req.body.id_famille,
-        id_categorie: req.body.id_categorie,
-        id_finition: req.body.id_finition,
+    const profil = new Profil({
+        id_profil: req.body.id_profil,
+        libelle_profil: req.body.libelle_profil,
+        id_fonctionnalite: req.body.id_fonctionnalite,
     });
 
-    Piece.create(piece, (err,data) =>{
+    Profil.create(profil, (err,data) =>{
         if (err){
             res.status(500).send({
-                message: err.message || "Some error occurred while creating the 'piece'."
+                message: err.message || "Some error occurred while creating the 'profil'."
             });
         } else res.send(data);
     });
 };
 
 exports.findAll = (req, res) => {
-    Piece.getAll((err, data) => {
+    Profil.getAll((err, data) => {
         if (err){
             res.status(500).send({
-                message: err.message || "Some error occurred while retrieving 'piece'."
+                message: err.message || "Some error occurred while retrieving 'profil'."
             });
         } else {
             res.send(data);
@@ -38,15 +34,15 @@ exports.findAll = (req, res) => {
 }
 
 exports.findOne = (req, res) => {
-    Piece.getById(req.params.id, (err, data) => {
+    Profil.getById(req.params.id, (err, data) => {
         if (err) {
             if (err.kind === "not_found") {
                 res.status(404).send({
-                    message: `Not found piece with id ${req.params.id}.`
+                    message: `Not found profil with id ${req.params.id}.`
                 });
             } else {
                 res.status(500).send({
-                    message: "Error retrieving piece with id " + req.params.id
+                    message: "Error retrieving profil with id " + req.params.id
                 });
             }
         } else res.send(data);
@@ -59,18 +55,18 @@ exports.update = (req, res) => {
             message: "Content can not be empty!"
         });
     }
-    Piece.updateById(
+    Profil.updateById(
         req.params.id,
-        new Piece(req.body),
+        new Profil(req.body),
         (err, data) => {
             if (err) {
                 if (err.kind === "not_found") {
                     res.status(404).send({
-                        message: `Not found piece with id ${req.params.id}.`
+                        message: `Not found profil with id ${req.params.id}.`
                     });
                 } else {
                     res.status(500).send({
-                        message: "Error updating piece with id " + req.params.id
+                        message: "Error updating profil with id " + req.params.id
                     });
                 }
             } else
@@ -80,17 +76,17 @@ exports.update = (req, res) => {
 };
 
 exports.delete = (req, res) => {
-    Piece.remove(req.params.id, (err, data) => {
+    Profil.remove(req.params.id, (err, data) => {
         if (err) {
             if (err.kind === "not_found") {
                 res.status(404).send({
-                    message: `Not found piece with id ${req.params.id}.`
+                    message: `Not found profil with id ${req.params.id}.`
                 });
             } else {
                 res.status(500).send({
-                    message: "Could not delete piece with id " + req.params.id
+                    message: "Could not delete profil with id " + req.params.id
                 });
             }
-        } else res.send({ message: `piece was deleted successfully!` });
+        } else res.send({ message: `profil was deleted successfully!` });
     });
 };

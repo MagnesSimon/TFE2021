@@ -32,6 +32,14 @@ require("./routes/fournisseur.routes")(app);
 require("./routes/localite.routes")(app);
 require("./routes/pays.routes")(app);
 require("./routes/finition.routes")(app);
+require("./routes/categorie.routes")(app);
+require("./routes/pole.routes")(app);
+require("./routes/jeu_de_dimension.routes")(app);
+require("./routes/dimension.routes")(app);
+require("./routes/historique.routes")(app);
+require("./routes/utilisateur.routes")(app);
+require("./routes/profil.routes")(app);
+require("./routes/fonctionnalite.routes")(app);
 
 app.listen(3001, () => {
     console.log("Server is running on port 3001.");

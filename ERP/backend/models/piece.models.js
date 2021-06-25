@@ -9,9 +9,6 @@ const piece = function (piece) {
     this.id_famille = piece.id_famille;
     this.id_categorie = piece.id_categorie;
     this.id_finition = piece.id_finition;
-
-    this.id_pays = pays.id_pays;
-    this.nom_pays = pays.nom_pays;
 }
 /*
 Permet d'insérer une nouvelles piece dans la DB
@@ -79,7 +76,7 @@ piece.updateById = (reference, valeur_seuil, quantite_en_stock, id_jeu_de_dimens
 };
 
 piece.remove = (id, result) => {
-    sql.query("DELETE FROM piece WHERE id_fournisseur = ?", id, (err, res) => {
+    sql.query("DELETE FROM piece WHERE reference = ?", id, (err, res) => {
         if (err) {
             console.log("error: ", err);
             result(null, err);
