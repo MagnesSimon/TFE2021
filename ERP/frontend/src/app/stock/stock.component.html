@@ -2,12 +2,66 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <h2>Mes appareils</h2>
-      <ul class="list-group">
-        <li *ngFor="let piece of pieces">
-          <span class="name">{{piece.reference}}</span>{{piece.quantite_en_stock}}
-        </li>
-      </ul>
+      <table class="stock">
+        <thead>
+          <tr>
+            <th>Pièces en stock</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="titreColonne">
+            <td>Référence</td>
+            <td>Famille</td>
+            <td>Categorie</td>
+            <td>Finition</td>
+            <td>Effet</td>
+            <td>Valeur seuil</td>
+            <td>Quantité en stock</td>
+          </tr>
+          <tr></tr>
+        <tr *ngFor="let piece of pieces">
+            <td>{{piece.reference}}</td>
+          <td>{{piece.nom_famille}}</td>
+          <td>{{piece.nom_categorie}}</td>
+          <td>{{piece.nom_finition}}</td>
+          <td>{{piece.effet_finition}}</td>
+          <td>{{piece.valeur_seuil}}</td>
+          <td>{{piece.quantite_en_stock}}</td>
+        </tr>
+        <!--
+        </tbody>
+          <li *ngFor="let piece of pieces">
+            <span class="name">[{{piece.reference}}]</span>
+          </li>
+          -->
+      </table>
+    </div>
+    <div>
+      <!--
+      <table width="100%" border="1">
+        <tr>
+          <td><ul>
+            <li>Allemagne</li>
+            <li>Autriche</li>
+            <li>Chine</li>
+            <li>Etats-Unis</li>
+            <li>Israël</li>
+            <li>Pays Bas</li>
+            <li>Royaume Uni</li></ul>
+          </td>
+          <td><ul>
+            <li>Australie</li>
+            <li>Canada</li>
+            <li>Espagne</li>
+            <li>Irlande</li>
+            <li>Italie</li>
+            <li>Portugal</li>
+            <li>Singapour</li>
+          </ul>
+          </td>
+        </tr>
+      </table>
+      -->
     </div>
   </div>
 </div>

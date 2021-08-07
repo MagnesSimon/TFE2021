@@ -1,4 +1,9 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {StockServices} from "../services/stock.services";
+import {HttpClient} from "@angular/common/http";
+import {VariableGlobale} from "../variableGlobale";
+import {Subject} from "rxjs";
+
 
 @Component({
   selector: 'app-stock',
@@ -6,26 +11,7 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./stock.component.css']
 })
 export class StockComponent implements OnInit {
-
-  appareils = [
-    {
-      name: 'Machine à laver',
-      status: 'éteint'
-    },
-    {
-      name: 'Frigo',
-      status: 'allumé'
-    },
-    {
-      name: 'Ordinateur',
-      status: 'éteint'
-    }
-  ];
-
-  @Input() appareilName: string | undefined;
-  @Input() appareilStatus: string | undefined;
-
-
+/*
     pieces = [{
       reference: "TE4200",
       valeur_seuil:5,
@@ -51,13 +37,48 @@ export class StockComponent implements OnInit {
         id_finition:1
       }
     ];
+     */
+    pieces = [{
+      nom_famille: "",
+      nom_categorie: "",
+      reference:"",
+      nom_finition:"",
+      effet_finition:"",
+      valeur_seuil:0,
+      quantite_en_stock: 0
+    }]
+
+  stockSubject = new Subject<any[]>();
+
+  //pieces: [{}] | undefined;
 
     @Input() reference: string | undefined;
     @Input() quantite_en_stock: number | undefined;
 
-  constructor() { }
+  constructor( private stockServices: StockServices,
+               private httpClient: HttpClient,
+               private varGlo: VariableGlobale) { }
 
   ngOnInit(): void {
+    // @ts-ignore
+    this.getStockFromServer();
+  }
+
+  getStockFromServer(){
+    this.httpClient
+      .get<any[]>(this.varGlo.url + '/stock')
+      .subscribe(
+        (response) => {
+          this.pieces = response;
+          this.emitStockSubject();
+        },
+        (error) => {
+          console.log('Erreur de chargement' + error);
+        }
+      )
+  }
+  emitStockSubject(){
+    this.stockSubject.next(this.pieces.slice());
   }
 
 }
