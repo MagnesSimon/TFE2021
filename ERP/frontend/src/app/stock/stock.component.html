@@ -1,67 +1,37 @@
-<p>stock works!</p>
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <table class="stock">
-        <thead>
-          <tr>
-            <th>Pièces en stock</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="titreColonne">
-            <td>Référence</td>
-            <td>Famille</td>
-            <td>Categorie</td>
-            <td>Finition</td>
-            <td>Effet</td>
-            <td>Valeur seuil</td>
-            <td>Quantité en stock</td>
-          </tr>
-          <tr></tr>
-        <tr *ngFor="let piece of pieces">
-            <td>{{piece.reference}}</td>
-          <td>{{piece.nom_famille}}</td>
-          <td>{{piece.nom_categorie}}</td>
-          <td>{{piece.nom_finition}}</td>
-          <td>{{piece.effet_finition}}</td>
-          <td>{{piece.valeur_seuil}}</td>
-          <td>{{piece.quantite_en_stock}}</td>
-        </tr>
-        <!--
-        </tbody>
-          <li *ngFor="let piece of pieces">
-            <span class="name">[{{piece.reference}}]</span>
-          </li>
-          -->
-      </table>
-    </div>
-    <div>
-      <!--
-      <table width="100%" border="1">
-        <tr>
-          <td><ul>
-            <li>Allemagne</li>
-            <li>Autriche</li>
-            <li>Chine</li>
-            <li>Etats-Unis</li>
-            <li>Israël</li>
-            <li>Pays Bas</li>
-            <li>Royaume Uni</li></ul>
-          </td>
-          <td><ul>
-            <li>Australie</li>
-            <li>Canada</li>
-            <li>Espagne</li>
-            <li>Irlande</li>
-            <li>Italie</li>
-            <li>Portugal</li>
-            <li>Singapour</li>
-          </ul>
-          </td>
-        </tr>
-      </table>
-      -->
-    </div>
-  </div>
+<div class="col-xs-12">
+  <table class="stock">
+    <tbody>
+    <tr class="titreColonne">
+      <td class="titreColonne">Référence</td>
+      <td class="titreColonne">Famille</td>
+      <td class="titreColonne">Categorie</td>
+      <td class="titreColonne">Finition</td>
+      <td class="titreColonne">Effet</td>
+      <td class="titreColonne">Valeur seuil</td>
+      <td class="titreColonne">Quantité en stock</td>
+    </tr>
+    <tr *ngFor="let piece of pieces ">
+      <!-- Référence-->
+      <td *ngIf="piece.valeur_seuil >= piece.quantite_en_stock" style="background-color: rosybrown">{{piece.reference}}</td>
+      <td *ngIf="piece.valeur_seuil < piece.quantite_en_stock">{{piece.reference}}</td>
+      <!-- Famille-->
+      <td *ngIf="piece.valeur_seuil >= piece.quantite_en_stock" style="background-color: rosybrown">{{piece.nom_famille}}</td>
+      <td *ngIf="piece.valeur_seuil < piece.quantite_en_stock">{{piece.nom_famille}}</td>
+      <!-- Catégorie-->
+      <td *ngIf="piece.valeur_seuil >= piece.quantite_en_stock" style="background-color: rosybrown">{{piece.nom_categorie}}</td>
+      <td *ngIf="piece.valeur_seuil < piece.quantite_en_stock">{{piece.nom_categorie}}</td>
+      <!-- Finition-->
+      <td *ngIf="piece.valeur_seuil >= piece.quantite_en_stock" style="background-color: rosybrown">{{piece.nom_finition}}</td>
+      <td *ngIf="piece.valeur_seuil < piece.quantite_en_stock">{{piece.nom_finition}}</td>
+      <!-- Effet-->
+      <td *ngIf="piece.valeur_seuil >= piece.quantite_en_stock" style="background-color: rosybrown">{{piece.effet_finition}}</td>
+      <td *ngIf="piece.valeur_seuil < piece.quantite_en_stock">{{piece.effet_finition}}</td>
+      <!-- Valeur seuil-->
+      <td *ngIf="piece.valeur_seuil >= piece.quantite_en_stock" style="background-color: rosybrown">{{piece.valeur_seuil}}</td>
+      <td *ngIf="piece.valeur_seuil < piece.quantite_en_stock">{{piece.valeur_seuil}}</td>
+      <!-- quantité en stock-->
+      <td *ngIf="piece.valeur_seuil >= piece.quantite_en_stock" style="background-color: rosybrown">{{piece.quantite_en_stock}}</td>
+      <td *ngIf="piece.valeur_seuil < piece.quantite_en_stock">{{piece.quantite_en_stock}}</td>
+    </tr>
+  </table>
 </div>
