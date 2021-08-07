@@ -2,15 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ead7f310-fc9b-4b70-a6cb-643dbe63120a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/controllers/stock.controllers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/models/stock.models.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/routes/stock.routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/services/piece.services.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/models/stock.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/piece/piece.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/piece/piece.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/piece/piece.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/piece/piece.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/stock/stock.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/stock/stock.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/stock/stock.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/stock/stock.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/liste-view/liste-view.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/liste-view/liste-view.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/liste-view/liste-view.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/liste-view/liste-view.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/piece.services.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/piece.services.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +23,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1u27gnZqo1bKfIiqD4FwWY7puLD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -33,9 +38,8 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Openclassroom/mon-projet-angular" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -56,7 +60,8 @@
       <workItem from="1623919082633" duration="41000" />
       <workItem from="1623920273618" duration="717000" />
       <workItem from="1624096671442" duration="22044000" />
-      <workItem from="1624611970393" duration="14307000" />
+      <workItem from="1624611970393" duration="14959000" />
+      <workItem from="1625131192460" duration="14305000" />
     </task>
     <task id="LOCAL-00001" summary="Début backend - select de toutes les pièces">
       <created>1624102926088</created>
@@ -121,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624616072103</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="récupération liste + BACKEND stock">
+      <created>1624639042050</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1624639042050</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +151,7 @@
     <MESSAGE value="&#10;Ajout des méthode GetById, UPDATE, et REMOVE" />
     <MESSAGE value="Correction backend + préparation du frontend pour le dev" />
     <MESSAGE value="Génération des premiers components + navigation entre les component" />
-    <option name="LAST_COMMIT_MESSAGE" value="Génération des premiers components + navigation entre les component" />
+    <MESSAGE value="récupération liste + BACKEND stock" />
+    <option name="LAST_COMMIT_MESSAGE" value="récupération liste + BACKEND stock" />
   </component>
 </project>
