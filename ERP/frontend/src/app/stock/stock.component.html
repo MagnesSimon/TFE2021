@@ -1,5 +1,5 @@
 <div class="col-xs-12">
-  <table class="stock">
+  <table class="stock" *ngIf="tableauVisible">
     <tbody>
     <!-- Colonne titre -->
     <tr class="titreColonne">
@@ -12,7 +12,7 @@
       <td class="titreColonne">Quantité en stock</td>
     </tr>
     <!-- Colonne générée en fonction des pièces dans la DB -->
-    <tr *ngFor="let piece of pieces ">
+    <tr *ngFor="let piece of pieces;">
       <!-- Référence-->
       <td *ngIf="piece.valeur_seuil >= piece.quantite_en_stock"
           style="background-color: rosybrown">
@@ -62,13 +62,32 @@
         {{piece.valeur_seuil}}
       </td>
       <!-- quantité en stock-->
+      <td *ngIf="piece.valeur_seuil < piece.quantite_en_stock ">
+        {{piece.quantite_en_stock}}
+      </td>
       <td *ngIf="piece.valeur_seuil >= piece.quantite_en_stock"
           style="background-color: rosybrown">
         {{piece.quantite_en_stock}}
       </td>
-      <td *ngIf="piece.valeur_seuil < piece.quantite_en_stock">
-        {{piece.quantite_en_stock}}
+
+      <!--
+      <td *ngIf="invoice.rowId == editRowId">
+        <input type="text" [(ngModel)]="invoice.hours">
       </td>
+      <td *ngIf="invoice.rowId !== editRowId" (click)="toggle(invoice.rowId)">
+        {{invoice.rowId}}
+      </td>
+      -->
+
     </tr>
   </table>
 </div>
+<div *ngIf="ficheTechniqueVisible">
+  <form [formGroup]="ficheForm" (ngSubmit)="onSubmitForm()">
+    <div class="form-group">
+      <label for="reference">Référence</label>
+      <input type="text" id="reference" class="form-control" formControlName="reference">
+    </div>
+  </form>
+</div>
+

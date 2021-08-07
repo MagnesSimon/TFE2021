@@ -3,6 +3,7 @@ import {StockServices} from "../services/stock.services";
 import {HttpClient} from "@angular/common/http";
 import {VariableGlobale} from "../variableGlobale";
 import {Subject} from "rxjs";
+import {FormBuilder, FormGroup} from "@angular/forms";
 
 
 @Component({
@@ -11,57 +12,57 @@ import {Subject} from "rxjs";
   styleUrls: ['./stock.component.css']
 })
 export class StockComponent implements OnInit {
-/*
-    pieces = [{
-      reference: "TE4200",
-      valeur_seuil:5,
-      quantite_en_stock:10,
-      id_famille:1,
-      id_categorie:7,
-      id_finition:1
-    },
-      {
-        reference:"MN4600",
-        valeur_seuil:5,
-        quantite_en_stock:12,
-        id_famille:2,
-        id_categorie:9,
-        id_finition:1
-      },
-      {
-        reference:"TE57",
-        valeur_seuil:0,
-        quantite_en_stock:0,
-        id_famille:1,
-        id_categorie:13,
-        id_finition:1
-      }
-    ];
-     */
-    pieces = [{
-      nom_famille: "",
-      nom_categorie: "",
-      reference:"",
-      nom_finition:"",
-      effet_finition:"",
-      valeur_seuil:0,
-      quantite_en_stock: 0
-    }]
+  get editable(): true {
+    return this._editable;
+  }
 
-  stockSubject = new Subject<any[]>();
+  set editable(value: true) {
+    this._editable = value;
+  }
+  get ficheTechniqueVisible(): boolean {
+    return this._ficheTechniqueVisible;
+  }
 
-  //pieces: [{}] | undefined;
+  set ficheTechniqueVisible(value: boolean) {
+    this._ficheTechniqueVisible = value;
+  }
 
-    @Input() reference: string | undefined;
-    @Input() quantite_en_stock: number | undefined;
+  get tableauVisible(): boolean {
+    return this._tableauVisible;
+  }
+
+  set tableauVisible(value: boolean) {
+    this._tableauVisible = value;
+  }
+
+  pieces = [{
+    nom_famille: "",
+    nom_categorie: "",
+    reference:"",
+    nom_finition:"",
+    effet_finition:"",
+    valeur_seuil:0,
+    quantite_en_stock: 0
+  }]
+
+  private _tableauVisible = true;
+  private _ficheTechniqueVisible = false;
+  private stockSubject: any
+
+  // @ts-ignore
+  ficheForm : FormGroup;
+  // @ts-ignore
+  private _editable: true ;
 
   constructor( private stockServices: StockServices,
                private httpClient: HttpClient,
-               private varGlo: VariableGlobale) { }
+               private varGlo: VariableGlobale,
+               private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
     // @ts-ignore
     this.getStockFromServer();
+    this.initForm();
   }
 
   getStockFromServer(){
@@ -81,4 +82,25 @@ export class StockComponent implements OnInit {
     this.stockSubject.next(this.pieces.slice());
   }
 
+  afficherFicheTechnique() {
+    this.tableauVisible = false;
+    this.ficheTechniqueVisible = true;
+
+  }
+
+  private initForm() {
+    this.ficheForm = this.formBuilder.group({
+      nom_famille: "",
+      nom_categorie: "",
+      reference:"",
+      nom_finition:"",
+      effet_finition:"",
+      valeur_seuil:0,
+      quantite_en_stock: 0
+    })
+  }
+
+  onSubmitForm() {
+
+  }
 }

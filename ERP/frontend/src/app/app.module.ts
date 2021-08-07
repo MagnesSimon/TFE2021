@@ -10,7 +10,7 @@ import { DroitsComponent } from './droits/droits.component';
 import { PenurieComponent } from './penurie/penurie.component';
 import {HttpClientModule} from "@angular/common/http";
 import {VariableGlobale} from "./variableGlobale";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { StockComponent } from './stock/stock.component';
 import {StockServices} from "./services/stock.services";
 
@@ -37,7 +37,8 @@ const appRoutes: Routes = [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     VariableGlobale,
