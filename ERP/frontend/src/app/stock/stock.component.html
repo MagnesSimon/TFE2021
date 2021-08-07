@@ -1,6 +1,7 @@
 <div class="col-xs-12">
   <table class="stock">
     <tbody>
+    <!-- Colonne titre -->
     <tr class="titreColonne">
       <td class="titreColonne">Référence</td>
       <td class="titreColonne">Famille</td>
@@ -10,28 +11,64 @@
       <td class="titreColonne">Valeur seuil</td>
       <td class="titreColonne">Quantité en stock</td>
     </tr>
+    <!-- Colonne générée en fonction des pièces dans la DB -->
     <tr *ngFor="let piece of pieces ">
       <!-- Référence-->
-      <td *ngIf="piece.valeur_seuil >= piece.quantite_en_stock" style="background-color: rosybrown">{{piece.reference}}</td>
-      <td *ngIf="piece.valeur_seuil < piece.quantite_en_stock">{{piece.reference}}</td>
+      <td *ngIf="piece.valeur_seuil >= piece.quantite_en_stock"
+          style="background-color: rosybrown">
+        {{piece.reference}}
+      </td>
+      <td *ngIf="piece.valeur_seuil < piece.quantite_en_stock">
+        {{piece.reference}}
+      </td>
       <!-- Famille-->
-      <td *ngIf="piece.valeur_seuil >= piece.quantite_en_stock" style="background-color: rosybrown">{{piece.nom_famille}}</td>
-      <td *ngIf="piece.valeur_seuil < piece.quantite_en_stock">{{piece.nom_famille}}</td>
+      <td *ngIf="piece.valeur_seuil >= piece.quantite_en_stock"
+          style="background-color: rosybrown">
+        {{piece.nom_famille}}
+      </td>
+      <td *ngIf="piece.valeur_seuil < piece.quantite_en_stock">
+        {{piece.nom_famille}}
+      </td>
       <!-- Catégorie-->
-      <td *ngIf="piece.valeur_seuil >= piece.quantite_en_stock" style="background-color: rosybrown">{{piece.nom_categorie}}</td>
-      <td *ngIf="piece.valeur_seuil < piece.quantite_en_stock">{{piece.nom_categorie}}</td>
+      <td *ngIf="piece.valeur_seuil >= piece.quantite_en_stock"
+          style="background-color: rosybrown">
+        {{piece.nom_categorie}}
+      </td>
+      <td *ngIf="piece.valeur_seuil < piece.quantite_en_stock">
+        {{piece.nom_categorie}}
+      </td>
       <!-- Finition-->
-      <td *ngIf="piece.valeur_seuil >= piece.quantite_en_stock" style="background-color: rosybrown">{{piece.nom_finition}}</td>
-      <td *ngIf="piece.valeur_seuil < piece.quantite_en_stock">{{piece.nom_finition}}</td>
+      <td *ngIf="piece.valeur_seuil >= piece.quantite_en_stock"
+          style="background-color: rosybrown">
+        {{piece.nom_finition}}
+      </td>
+      <td *ngIf="piece.valeur_seuil < piece.quantite_en_stock">
+        {{piece.nom_finition}}
+      </td>
       <!-- Effet-->
-      <td *ngIf="piece.valeur_seuil >= piece.quantite_en_stock" style="background-color: rosybrown">{{piece.effet_finition}}</td>
-      <td *ngIf="piece.valeur_seuil < piece.quantite_en_stock">{{piece.effet_finition}}</td>
+      <td *ngIf="piece.valeur_seuil >= piece.quantite_en_stock"
+          style="background-color: rosybrown">
+        {{piece.effet_finition}}
+      </td>
+      <td *ngIf="piece.valeur_seuil < piece.quantite_en_stock"
+      >{{piece.effet_finition}}
+      </td>
       <!-- Valeur seuil-->
-      <td *ngIf="piece.valeur_seuil >= piece.quantite_en_stock" style="background-color: rosybrown">{{piece.valeur_seuil}}</td>
-      <td *ngIf="piece.valeur_seuil < piece.quantite_en_stock">{{piece.valeur_seuil}}</td>
+      <td *ngIf="piece.valeur_seuil >= piece.quantite_en_stock"
+          style="background-color: rosybrown">
+        {{piece.valeur_seuil}}
+      </td>
+      <td *ngIf="piece.valeur_seuil < piece.quantite_en_stock">
+        {{piece.valeur_seuil}}
+      </td>
       <!-- quantité en stock-->
-      <td *ngIf="piece.valeur_seuil >= piece.quantite_en_stock" style="background-color: rosybrown">{{piece.quantite_en_stock}}</td>
-      <td *ngIf="piece.valeur_seuil < piece.quantite_en_stock">{{piece.quantite_en_stock}}</td>
+      <td *ngIf="piece.valeur_seuil >= piece.quantite_en_stock"
+          style="background-color: rosybrown">
+        {{piece.quantite_en_stock}}
+      </td>
+      <td *ngIf="piece.valeur_seuil < piece.quantite_en_stock">
+        {{piece.quantite_en_stock}}
+      </td>
     </tr>
   </table>
 </div>
